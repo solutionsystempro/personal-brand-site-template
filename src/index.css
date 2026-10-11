@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+    letter-spacing: -0.02em;
+  }
+  h3,
+  h4 {
+    letter-spacing: -0.005em;
+  }
+  /* Keep section headings clear of the sticky header when jumping to #anchors. */
+  [id] {
+    scroll-margin-top: 80px;
+  }
+  ::selection {
+    @apply bg-primary-soft text-primary-dark;
+  }
+  /* One consistent, high-visibility focus ring for keyboard users. */
+  :focus-visible {
+    outline: 3px solid theme("colors.primary");
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-y {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-primary-dark;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-primary;
+  }
+  .card {
+    @apply rounded-2xl border border-border bg-white shadow-card;
+  }
+  .grid-paper {
+    background-image:
+      linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF1FF"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#2563EB" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="80" y="80" width="72" height="72" rx="18" fill="#2563EB"/>
+  <text x="116" y="128" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">YN</text>
+  <text x="172" y="128" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="32" font-weight="700" fill="#0F172A">Your Name</text>
+  <text font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="76" font-weight="800" fill="#0F172A" letter-spacing="-2">
+    <tspan x="80" y="300">Helping [who] get [result]</tspan>
+    <tspan x="80" y="390" fill="#2563EB">without [pain].</tspan>
+  </text>
+  <text x="80" y="500" font-family="Inter, Arial, sans-serif" font-size="30" fill="#475569">yourdomain.com</text>
+  <rect x="80" y="540" width="120" height="8" rx="4" fill="#2563EB"/>
+</svg>
