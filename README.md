@@ -171,9 +171,9 @@ vercel.json         SPA rewrite for Vercel
 
 Versions are pinned exactly. On 11 October 2026, `npm audit` reported 11 findings (6 high, 5 moderate) in three groups:
 
-- **Tailwind CSS 3.4.19** (high): `braces`, `micromatch`, `fast-glob` and `chokidar` in Tailwind's build-time file watcher, plus moderate `postcss-nested` and `postcss-selector-parser`. Build-time only, nothing ships to visitors. npm's suggested fix is Tailwind 4, a breaking upgrade.
-- **Vite 5.4.21** (high, via moderate `esbuild`): affects the local dev server only. Do not expose `npm run dev` to the internet. npm's suggested fix is a newer Vite major (it proposed 8.3.4), a breaking upgrade.
-- **React Router 6.30.6** (moderate): an open redirect via backslash paths in `<Link>` and `useNavigate`, and a server-side rendering hydration issue. Both are fixed only in React Router 7.18.0 and later, a breaking upgrade. This site renders on the client only and every link target comes from your own `content.ts`, so neither path is reachable unless you add user-supplied links.
+- **Tailwind CSS 3.4.19** (high): `braces`, `micromatch`, `fast-glob` and `chokidar` in Tailwind's build-time file watcher, plus moderate `postcss-nested` and `postcss-selector-parser`. Build-time only, nothing ships to visitors. npm's suggested fix is `tailwindcss` 4.3.3, a breaking upgrade.
+- **Vite 5.4.21** (high, via moderate `esbuild`): affects the local dev server only. Do not expose `npm run dev` to the internet. npm's suggested fix is `vite` 8.3.4, a breaking upgrade.
+- **React Router 6.30.6** (moderate): an open redirect via backslash paths in `<Link>` and `useNavigate`, and a server-side rendering hydration issue. The advisories cover versions below 7.18.0, and npm's suggested fix is `react-router-dom` 7.18.4, a breaking upgrade. This site renders on the client only and link targets are either set by you in `content.ts` or fixed in the template code (such as the logo link to `/`). None come from visitors, so neither path is reachable unless you add user-supplied links.
 
 Run `npm audit` yourself for the current state.
 
