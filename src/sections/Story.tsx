@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 export default function Story() {
   return (
-    <section aria-labelledby="story-title" className="section-y">
+    <section aria-labelledby="story-title" className="section-y overflow-x-clip">
       <div className="container-x grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <figure className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div aria-hidden="true" className="grid-paper absolute -inset-6 rounded-[2.5rem] [mask-image:radial-gradient(closest-side,#000,transparent)]" />
