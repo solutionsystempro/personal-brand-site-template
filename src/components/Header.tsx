@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { nav } from "../content";
@@ -9,6 +9,7 @@ import Button from "./Button";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
 
   // Close the mobile menu whenever the route or hash changes.
@@ -24,7 +25,10 @@ export default function Header() {
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -66,6 +70,7 @@ export default function Header() {
         </div>
 
         <button
+          ref={toggleRef}
           type="button"
           className="grid h-11 w-11 place-items-center rounded-xl border border-border bg-white text-ink md:hidden"
           aria-expanded={open}

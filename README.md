@@ -1,7 +1,7 @@
 # Personal Brand Site Template
 
 A free, open-source website template for consultants, coaches, freelancers and creators.
-Edit one content file, change six colours if you want, and deploy to Vercel in a few minutes.
+Edit one content file, change seven colours if you want, and deploy to Vercel in a few minutes.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/solutionsystempro/personal-brand-site-template)
 
@@ -169,7 +169,9 @@ vercel.json         SPA rewrite for Vercel
 
 ## Notes on dependencies
 
-Versions are pinned exactly. `npm audit` currently reports advisories in build-time tools (Tailwind CSS 3's file watcher and Vite 5's dev server) that do not ship to visitors, plus two moderate React Router 6 advisories that apply to server-side rendering and user-supplied link targets, neither of which this static site uses. Upgrading to Vite 6+, Tailwind 4 or React Router 7 clears them but involves breaking changes.
+Versions are pinned exactly. As of October 2026, `npm audit` reports advisories in build-time tools (Tailwind CSS 3's file watcher and Vite 5's dev server) that do not ship to visitors, plus two moderate React Router 6 advisories that apply to server-side rendering and user-supplied link targets, neither of which this static site uses. Upgrading to Vite 6+, Tailwind 4 or React Router 7 clears them but involves breaking changes.
+
+Fonts load from Google Fonts (a third-party request, no tracking). To self-host instead, remove the `<link>` tags in `index.html` and add the font files to `public/`.
 
 ## License
 
