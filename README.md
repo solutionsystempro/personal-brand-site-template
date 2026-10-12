@@ -5,7 +5,9 @@ Edit one content file, change seven colours if you want, and deploy to Vercel in
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/solutionsystempro/personal-brand-site-template)
 
-> **Screenshot:** add a screenshot of your deployed site here, for example `docs/screenshot.png`, then reference it with `![Screenshot](docs/screenshot.png)`.
+**Live demo:** [personal-brand-site-template.vercel.app](https://personal-brand-site-template.vercel.app)
+
+![Template home page, hero section](docs/screenshot.png)
 
 ## What you get
 
